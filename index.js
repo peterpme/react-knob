@@ -10,10 +10,6 @@ export default class Knob extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this.input = React.findDOMNode(this.refs.number)
-  }
-
   shouldComponentUpdate(nextProps, nextState) {
     return nextState.value !== this.state.value
   }
@@ -22,6 +18,10 @@ export default class Knob extends React.Component {
     this.setState({
       value: value,
       degree: this.valueToRadian(value)
+    }, () => {
+      if (this.props.onChangeValue) {
+        this.props.onChangeValue(this.state.value)
+      }
     })
   }
 
@@ -37,12 +37,12 @@ export default class Knob extends React.Component {
             type="number"
             min={0}
             max={100}
-            ref="number"
+            ref="input"
             className="Knob-value"
             defaultValue={this.props.value}
             value={this.state.value}
             onChange={ evt => this.handleChange(evt.target.value)}
-            onWheel={ () => this.input.focus()}
+            onWheel={ () => React.findDOMNode(this.refs.input).focus()}
           />
         </div>
         <div

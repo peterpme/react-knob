@@ -9,6 +9,7 @@ A simple knob for React components.
 ## Usage
 
 Activated by tabbing to it or by hovering over and scrolling.
+
 I've included a sample scss file. Feel free to use it or style it yourself.
 
 ### Props

@@ -2,14 +2,14 @@
 
 A simple knob for React components.
 
-You can activate by tabbing to it or by hovering over and scrolling.
-
-
-```
+```javascript
   npm install react-knob
 ```
 
 ## Usage
+
+Activated by tabbing to it or by hovering over and scrolling.
+I've included a sample scss file. Feel free to use it or style it yourself.
 
 ### Props
 

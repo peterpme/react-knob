@@ -11,7 +11,8 @@
     "url": "git+https://github.com/ppiekarczyk/react-knob.git"
   },
   "keywords": [
-    "React"
+    "react-component",
+    "react"
   ],
   "author": "Peter Piekarczyk <peterpiekarczyk@gmail.com> (http://peterp.me)",
   "license": "MIT",
